@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(etPanjang.getText()) || TextUtils.isEmpty(etLebar.getText())){
                     Toast.makeText(MainActivity.this, "Nilai yang dimasukkan tidak boleh kososng",Toast.LENGTH_SHORT).show();
+                }else if(etPanjang.getText().toString().equals(".") || etLebar.getText().toString().equals(".")){
+                    Toast.makeText(MainActivity.this, "Masukkin angka yang bener dongg",Toast.LENGTH_SHORT).show();
                 }else {
 
                     String panjang = etPanjang.getText().toString().trim();
